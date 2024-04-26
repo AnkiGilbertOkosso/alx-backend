@@ -26,9 +26,6 @@ app.config.from_object(Config)
 def get_locale():
     """
     Determine the best-matching language for the user.
-
-    Returns:
-        str: The best-matching language code.
     """
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
@@ -37,9 +34,6 @@ def get_locale():
 def index():
     """
     Render the index page with parametrized titles and headers.
-
-    Returns:
-        str: Rendered HTML content for the index page.
     """
     return render_template('3-index.html')
 
